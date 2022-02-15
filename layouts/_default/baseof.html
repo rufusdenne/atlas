@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}" class="has-navbar-fixed-top">
     <head>
 
         {{ block "site/meta" . }}{{ partial "site/meta.html" . }}{{ end }}
@@ -17,11 +17,14 @@
     </head>
     <body>
 
-        {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
+        {{ block "header" . }}
+            {{ partial "site/header.html" . }}
+        {{ end }}
 
         <main class="site-main" role="main">
 
-            {{ block "main" . }}{{ end }}
+            {{ block "main" . }}
+            {{ end }}
 
         </main>
 

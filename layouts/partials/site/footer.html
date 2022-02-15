@@ -1,7 +1,37 @@
-<footer class="site-footer" role="contentinfo">
+<footer class="site-footer footer" role="contentinfo">
 
-    <p class="site-footer__copyright">
-        &copy; {{ now.Format "2006" }} &middot; <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    </p>
+    <div class="container">
+
+        <div class="columns is-variable is-8">
+
+            <div class="column">
+               <p class="site-footer__copyright">
+                    &copy; {{ now.Format "2006" }} &middot; <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                </p>
+            </div>
+
+            <div class="column">
+
+                <nav class="level">
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p><a href="{{.Site.Data.config.global.links.location}}" target="_blank">Find Us</a></p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                      <p><a href="{{.Site.Data.config.global.links.facebook}}" target="_blank" rel="me">Facebook</a></p>
+                  </div>
+                  <div class="level-item has-text-centered">
+                      <p><a href="{{.Site.Data.config.global.links.instagram}}" target="_blank" rel="me">Instagram</a></p>
+                  </div>
+                  <div class="level-item has-text-centered">
+                      <p><a href="mailto:{{.Site.Data.config.global.links.email}}">{{.Site.Data.config.global.links.email}}</a></p>
+                  </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
 
 </footer>

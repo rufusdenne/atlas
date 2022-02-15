@@ -1,0 +1,190 @@
+{{ define "main" }}
+  <section class="hero is-medium">
+    <div class="container">
+      <div class="hero-body content">
+        <h1 class="title is-size-1">hand–stretched deliciousness</h1>
+        <p>We're Barney and Sammy and we would love to introduce you to Farm Slice, our high-quality, hand-stretched, wood-ﬁred pizza company.</p>
+        <p>We use the best local ingredients with many from our family farm <a href="#events">(here in Nash)</a> – that’s what makes us different and our pizzas extra tasty!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-medium">
+    
+    <div class="container">
+
+      <div class="content">
+        <h2 class="title is-size-1">the big idea</h2>
+        <p>We were inspired by all the amazing local produce in England and thought we should combine it with something equally delicious so naturally we thought of that delicious doughy treat - PIZZA!</p>
+        <p>We spent months perfecting our dough for the bases and topping them with the best fresh produce, then lovingly restored our vintage Rice horsebox into a mean green pizza wagon.</p>
+        <p>We think you’ll be able to taste the love, thought and effort that goes into each one of our pizzas as we spread our ‘carb-y’ joy all over Milton Keynes and beyond.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <a name="events"></a>
+  
+  <section class="section">
+
+      <div class="container">
+
+        <div class="content has-text-centered">
+          <h2 class="title is-size-1">they see us rollin'</h2>
+        </div>
+
+
+        <div class="columns is-variable is-vcentered is-8">
+
+          <div class="column content">
+
+            <h3>home on the farm</h3>
+            <p>We cook our delicious pizzas fresh on our beautiful family farm in Nash every Friday night from 5pm, so if you can’t ﬁnd us out and about you can always ﬁnd us here enjoying the view.</p>
+
+            <a class="button is-primary" href="{{.Site.Data.config.global.links.location}}">Find Us Here</a>
+
+          </div>
+          
+          <div class="column content">
+
+            <h3>out and about</h3>
+            <p>We love taking our trailer out and about and we regularly do different village takeaway nights all across Milton Keynes. Check out our movements on social media <a href="{{.Site.Data.config.global.links.instagram}}">@farmslicepizza</a> and come and say hi!</p>
+
+            <a class="button is-primary" href="{{.Site.Data.config.global.links.instagram}}">Follow Us Here</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container">
+        <div class="content has-text-centered">
+          <h2>Coming to You</h2>
+        </div>
+      </div>
+
+  </section>
+
+  <a name="hi"></a>
+  <section class="section is-medium has-background-primary">
+    
+    <div class="container">
+      <div class="content has-text-centered">
+        <h2 class="title is-size-1">a pizza for any event</h2>
+      </div>
+
+
+      <div class="columns is-variable is-vcentered is-8">
+
+        <div class="column content">
+
+          <p>We LOVE doing events, be it parties, weddings and everything in between and we are available to hire.</p>
+
+          <p>If you have something coming up and fancy wowing your guests we can bring our converted vintage horsebox and cook some amazing, fresh pizza for you and your guests.</p>
+
+          <p>Just ﬁll in this simple form and we can have a chinwag about making your event perfect through pizza.</p>
+
+        </div>
+        
+        <div class="column content">
+
+          <form>
+            
+            {{ partial "site/form.html" . }}
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section is-medium">
+
+    <div class="container">
+    
+      <div class="content has-text-centered">
+        <h2 class="title is-size-1">what goes into all our pizzas</h2>
+        <p class="subtitle">(aside from the obvious: Love, Passion, Enthusiasm, Effort, Dedication & Time)</p>
+      </div>
+
+      <div class="columns is-variable is-8 is-multiline">
+
+        <div class="column is-6 content">
+
+          <h4 class="title">The dough</h4>
+          <p>We use the amazing Doves Farm organic ﬂour to make all of our pizza bases in house, its soft, beautifully milled and produces awesome bases.</p>
+          <a href="">dovesfarm.co.uk</a>
+
+        </div>
+
+        <div class="column is-6 content">
+
+          <h4 class="title">The cheese</h4>
+          <p>We use Laverstoke Park farm’s buffalo mozzarrella for all of our pizzas. It is honestly the most delicious, creamy mozzarrella we’ve ever tried!</p>
+          <a href="">laverstokepark.co.uk</a>
+
+        </div>
+
+        <div class="column is-6 content">
+
+          <h4 class="title">The Toppings</h4>
+          <p>If the produce isn’t from our family farm then its from another amazing English producer. It’s not just opening a packet we take great care preparing the ingredients in the kitchen so they’re perfect for pizzas.</p>
+
+        </div>
+
+        <div class="column is-6 content">
+
+          <h4 class="title">The Tomato sauce</h4>
+          <p>We source high quality tomatoes then slow roast them with olive oil and our secret seasoning to give our pizza sauce the best possible ﬂavour. It is delicious and absolutely <u>never out of a tin!</u></p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <a name="pizzas"></a>
+  <section class="section is-medium">
+
+    <div class="container">
+    
+      <div class="content">
+        <h2 class="title is-size-1">just a taste</h2>
+      </div>
+
+      {{ range first 10 .Site.RegularPages }}
+
+        <div class="columns is-variable is-8 is-multiline">
+
+          <div class="column is-6 content">
+
+            <hr>
+            <h3 class="title">{{ .Title }}</h3>
+            <p>{{ .Content }}</p>
+
+          </div>
+
+          <div class="column is-6 content">
+
+            <img src="{{ .Params.coverimage }}">
+
+          </div>
+
+        </div>
+
+      {{ end }}
+
+
+    </div>
+
+  </section>
+{{ end }}

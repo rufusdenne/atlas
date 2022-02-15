@@ -1,5 +1,40 @@
 <header class="site-header" role="banner">
+  
+  <nav class="navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
 
-    <strong><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></strong>
-    
+    <div class="container">
+      <div class="navbar-brand">
+        
+        <strong class="navbar-item svg-logo">
+      
+          {{ partial "svg/icons/farmslice-logo.svg" }}
+
+        </strong>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#pizzas">
+            Our Pizzas
+          </a>
+
+          <a class="navbar-item" href="#events">
+            Events
+          </a>
+
+          <a class="navbar-item" href="#hi">
+            Say Hi
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
 </header>
