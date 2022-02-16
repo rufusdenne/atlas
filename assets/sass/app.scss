@@ -7,3 +7,7 @@ $primary: #5B9270;
 $success: #75A86E;
 
 @import "../../node_modules/bulma/bulma.sass";
+
+html {
+  scroll-behavior: smooth;
+}
